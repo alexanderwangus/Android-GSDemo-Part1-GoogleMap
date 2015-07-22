@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".GSDemoActivity" >
+    
+    <LinearLayout
+		android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <ToggleButton 
+            android:id="@+id/tb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:textOff="Normal map"
+            android:textOn="Satellite map"
+            android:checked="false"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button 
+            android:id="@+id/locate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Locate" 
+            android:layout_weight="1"/>
+        <Button 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent" 
+            android:id="@+id/add" 
+            android:layout_weight="1" 
+            android:text="Add"/>
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:layout_width="match_parent" 
+            android:id="@+id/clear" 
+            android:layout_weight="1" 
+            android:text="Clear"/>
+
+    </LinearLayout>
+    
+    
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+</LinearLayout>
